@@ -8,7 +8,18 @@ This is a skeleton Arrow project. The project is organized into several differen
 
 ## Get Started
 
-First, you should make sure you're environment is setup and ready to go.  To get started, let's make sure you can run the project, view the documentation and test the sample generated API.
+First, you should make sure you're environment is setup and ready to go : 
+
+```bash
+$ appc setup
+```
+
+**Username :** sofianebelhadjkacem13@gmail.com
+
+
+**Password :** projet2015?
+
+To get started, let's make sure you can run the project, view the documentation and test the sample generated API.
 
 ```bash
 $ appc run
