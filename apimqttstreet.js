@@ -1,6 +1,8 @@
 var Arrow = require('arrow');
+var isJSON = require('is-json');
 
 var client;
+
 
 module.exports.mqttInit = function() {
 	var mqtt = require('mqtt');
@@ -26,9 +28,9 @@ var handleMessage = function(topic, message) {
     		processMessage(message);
     		break;
     	
-    	case 'myhome/server/will':
-    		processLWTMessage(message);
-    		break;
+    	// case 'myhome/server/will':
+    	// 	processLWTMessage(message);
+    	// 	break;
     	
     	default: unhandledTopic(topic, message);
     }
@@ -77,6 +79,9 @@ var getStreet = function(streetId, callback) {
 var processMessage = function(message, callback) {
 	console.log("apibmqttstreet.js - processMessage() - message = "+message);
 	
+	// Test if string is Json 
+	if(isJSON(message)){
+
     message = JSON.parse(message);
     console.log("apibmqttstreet.js - getStreet() - streetId = "+message.streetId);
 	
@@ -97,6 +102,6 @@ var processMessage = function(message, callback) {
             // createVacation(instance.id, req.body.count);
         }
     });
-
+	}
 
 };
