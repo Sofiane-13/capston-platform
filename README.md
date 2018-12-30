@@ -8,7 +8,13 @@ This is a skeleton Arrow project. The project is organized into several differen
 
 ## Get Started
 
-First, you should make sure you're environment is setup and ready to go : 
+Install appcelerator :
+
+```bash
+npm install appcelerator -g
+```
+
+You should make sure you're environment is setup and ready to go : 
 
 ```bash
 $ appc setup
